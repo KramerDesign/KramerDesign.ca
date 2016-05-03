@@ -1,0 +1,56 @@
+/* app css stylesheet */
+
+.menu {
+  list-style: none;
+  margin-bottom: 2em;
+  padding: 0 0 0.5em;
+
+}
+
+.menu > li {
+  display: inline;
+}
+
+.menu > li:before {
+  content: "|";
+  padding-right: 0.3em;
+}
+
+.menu > li:nth-child(1):before {
+  content: "";
+  padding: 0;
+}
+
+#page1{
+  background-color: mediumorchid;
+}
+
+#page2{
+background-color: Navy;
+}
+
+#page3{
+background-color: peachpuff;
+}
+#page4{
+background-color:hotpink;
+}
+
+#page5{
+  background-color: #2aabd2;
+
+}
+#page6{
+  background-color:purple;
+}
+
+#page7{
+  background-color: #c7254e;
+
+}
+#contact{
+  background-color: aquamarine;
+}
+body{
+  background-color: whitesmoke;
+}
