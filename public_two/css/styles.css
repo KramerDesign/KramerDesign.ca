@@ -4,11 +4,14 @@
   list-style: none;
   margin-bottom: 2em;
   padding: 0 0 0.5em;
+    background-color: #3c3c3c;
+    border-bottom: white;
+    color:white;
 
 }
 html{
   background-color: #2aabd2;
-  background-image: url("/img/blue.png");
+
 }
 
 .menu > li {
@@ -26,7 +29,35 @@ html{
 }
 
 #page1{
-  background-color: mediumorchid;
+  /*background-color: mediumorchid;*/
+  background-image: url("../img/flower1.png");
+    width:100%;
+    height:800px;
+    color:white;
+    background-size: contain;
+}
+h1{
+    color:white;
+
+}
+/* unvisited link */
+a:link {
+    color: white;
+}
+
+/* visited link */
+a:visited {
+    color: white;
+}
+
+/* mouse over link */
+a:hover {
+    color: hotpink;
+}
+
+/* selected link */
+a:active {
+    color: darkred;
 }
 
 #page2{
