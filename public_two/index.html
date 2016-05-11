@@ -5,15 +5,19 @@
     <title>Katie Kramer Web Design</title>
     <link rel="stylesheet" href="lib/normalize.css">
     <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <link href='https://fonts.googleapis.com/css?family=Cinzel' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/styles.css"/>
 </head>
 <body>
+<nav class="navbar-fixed-top">
 <h1 class="col-sm-12">Katie Kramer Web Design</h1>
+
 <ul class="menu">
     <!--<li><a href="#/view1">view1</a></li>-->
     <!--<li><a href="#/view2">view2</a></li>-->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav">
+        <ul class="nav navbar-nav ">
             <li class="active"><a href="#/home">Home<span class="sr-only">(current)</span></a></li>
             <li><a href="#/resume">Resume</a></li>
             <li class="dropdown">
@@ -28,15 +32,15 @@
             <li><a href="#/about">About</a></li>
             <li><a href="#/contact">Contact Page</a></li>
         </ul>
-
-        </li>
+    </ul>
     </div>
-</ul>
 
+</nav>
+<div class="container-fluid">
 
 <div ng-view></div>
-
-<footer class="col-sm-12">
+</div>
+<footer class="navbar-fixed-bottom">
     <h6>Designed by &#169;KramerDesign</h6>
 </footer>
 
@@ -58,13 +62,13 @@
 
 <script src="js/directives/directives.js"></script>
 
-<script src="js/controllers/MyCtrl1.js"></script>
-<script src="js/controllers/MyCtrl2.js"></script>
-<script src="js/controllers/MyCtrl3.js"></script>
-<script src="js/controllers/MyCtrl4.js"></script>
-<script src="js/controllers/MyCtrl5.js"></script>
+<script src="js/controllers/homeCtrl.js"></script>
+<script src="js/controllers/resumeCtrl.js"></script>
+<script src="js/controllers/wireCtrl.js"></script>
+<script src="js/controllers/conceptCtrl.js"></script>
+<script src="js/controllers/finishedCtrl.js"></script>
 <script src="js/controllers/MyCtrl6.js"></script>
-<script src="js/controllers/MyCtrl7.js"></script>
+<script src="js/controllers/aboutCtrl.js"></script>
 <script src="js/controllers/ContactCtrl.js"></script>
 
 <script src="js/config/routefiles.js"></script>
