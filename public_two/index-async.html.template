@@ -26,7 +26,7 @@
       'lib/angular/angular.js',
       'lib/angular/angular-route.js',
       'js/app.js',
-      'js/services.js',
+      'js/contact.js',
       'js/controllers.js',
       'js/filters.js',
       'js/directives.js'

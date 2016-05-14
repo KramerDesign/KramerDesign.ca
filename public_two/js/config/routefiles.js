@@ -10,6 +10,6 @@ angular.module('seedApp.configFiles', [])
         $routeProvider.when('/finished', {templateUrl: 'partials/finished.html', controller: 'finishedCtrl'});
         //$routeProvider.when('/view6', {templateUrl: 'partials/partial6.html', controller: 'MyCtrl6'});
         $routeProvider.when('/about', {templateUrl: 'partials/about.html', controller: 'aboutCtrl'});
-        $routeProvider.when('/contact', {templateUrl: 'partials/contact.html', controller: 'ContactCtrl'});
+        $routeProvider.when('/contact', {templateUrl: 'partials/contact.html', controller: 'contactCtrl'});
         $routeProvider.otherwise({redirectTo: '/home'});
     }]);
