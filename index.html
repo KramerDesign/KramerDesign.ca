@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en" ng-app="seedApp">
+<head>
+    <meta charset="utf-8">
+    <title>Katie Kramer Web Design</title>
+    <link rel="stylesheet" href="lib/normalize.css">
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <link href='https://fonts.googleapis.com/css?family=Cinzel' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/styles.css"/>
+</head>
+<body>
+<div class="navbar-fixed-top">
+<h1 class="col-sm-12">Katie Kramer Web Design</h1>
+
+<ul class="menu">
+    <!--<li><a href="#/view1">view1</a></li>-->
+    <!--<li><a href="#/view2">view2</a></li>-->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav ">
+            <li class="active"><a href="#/home">Home<span class="sr-only">(current)</span></a></li>
+            <li><a href="#/resume">Resume</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                   aria-expanded="false">Portfolio<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#/wireframes">Wireframes</a></li>
+                    <li><a href="#/concepts">Concepts & Logos</a></li>
+                    <li><a href="#/finished">Finished Works</a></li>
+                </ul>
+            </li>
+            <li><a href="#/about">About</a></li>
+            <li><a href="#/contact">Contact</a></li>
+        </ul>
+    </ul>
+    </div>
+    </div>
+
+</nav>
+<div class="container-fluid">
+
+<div ng-view></div>
+</div>
+<footer class="navbar-fixed-bottom">
+    <h6>Designed by &#169;KramerDesign</h6>
+</footer>
+
+
+<!-- In production use:
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+-->
+
+<script src="lib/Jquery/jquery-1.11.3.min.js"></script>
+<script src="lib/angular/angular.js"></script>
+<script src="lib/angular/angular-route.js"></script>
+<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+
+<script src="js/apps/app.js"></script>
+
+<script src="js/services/contact.js"></script>
+
+<script src="js/filters/filters.js"></script>
+
+<script src="js/directives/directives.js"></script>
+
+<script src="js/controllers/homeCtrl.js"></script>
+<script src="js/controllers/resumeCtrl.js"></script>
+<script src="js/controllers/wireCtrl.js"></script>
+<script src="js/controllers/conceptCtrl.js"></script>
+<script src="js/controllers/finishedCtrl.js"></script>
+<script src="js/controllers/MyCtrl6.js"></script>
+<script src="js/controllers/aboutCtrl.js"></script>
+<script src="js/controllers/ContactCtrl.js"></script>
+
+<script src="js/config/routefiles.js"></script>
+
+
+
+</body>
+</html>
+

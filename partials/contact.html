@@ -1,0 +1,123 @@
+<!-- ====Contact Page=====-->
+<section>
+    <div class="row centered">
+        <h1 class="centered kbsBlue">
+            <span class="glyphicon glyphicon-earphone kbsRed animated lightSpeedIn"></span>
+            CONTACT US
+        </h1>
+
+        <div class="row centered">
+            <address class="address centered">
+                <a href="tel:17053520203"><span class="glyphicon glyphicon-phone"></span> (705)352-0203</a>
+            </address>
+        </div>
+        <hr>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-3 col-lg-offset-1">
+            <h4>Mailing Address:</h4>
+        </div>
+        <div class="col-lg-6 col-lg-offset-1">
+            <div class="row centered">
+                <h2>
+                    <span class="glyphicon glyphicon-envelope"></span> Email Using this Form
+                </h2>
+                <!-- ===TOPIC ===================================================================================================================-->
+
+                <form novalidate name="contactUs" class="contactMe">
+                    <div class="form-group">
+                        <label for="topic" class="label inlineStyle">Topic:</label>
+                        <select ng-model="topicsList"
+                                ng-options="topicItem.name for topics in topicsList"
+                                id="topic"
+                                class="mdPrint">
+                        </select>
+                        <br/>
+                    </div>
+                    <!-- ===FULL NAME===================================================================================================================-->
+
+                    <div class="form-group">
+                        <label for="fullName" class="label inlineStyle">Name:</label>
+                        <input type="text"
+                               id="fullName"
+                               name="fullName"
+                               data-ng-model="fullName"
+                               data-ng-minlength="2"
+                               data-ng-maxlength="25"
+                               placeholder="Enter Full Name - Between 2-25 letters"
+                               class="form-control input-control"
+                               autofocus
+                               required/>
+                        <span class="boldme em-red"
+                              data-ng-show="contactUs.fullName.$error.minlength">Sorry: This is too short!</span><br>
+                        <span class="boldme em-red"
+                              data-ng-show="contactUs.fullName.$error.maxlength">Sorry: This is too long!</span>
+                    </div>
+
+                    <!-- === EMAIL ===================================================================================================================-->
+                    <div class="form-group">
+                        <label for="email" class="label inlineStyle">Email:</label>
+                        <input type="email"
+                               id="email"
+                               name="email"
+                               data-ng-model="email"
+                               placeholder="Enter Email"
+                               class="form-control input-control"
+                               data-ng-required="true"/>
+                        <span class="boldme em-red"
+                              ng-show="contactUs.email.$error.email">Please enter a valid email.</span>
+                    </div>
+
+                    <!-- === Phone ===================================================================================================================-->
+                    <div class="form-group">
+                        <label for="phone" class="label inlineStyle">Phone:</label>
+                        <input type="tel"
+                               name="phone"
+                               id="phone"
+                               data-ng-model="phone"
+                               class="form-control input-control"
+                               data-ng-minlength="10"
+                               data-ng-maxlength="12"
+                               placeholder="Required   111-111-1111"
+                               data-ng-pattern="/^\(?(\d{3})\)?[ .-]?(\d{3})[ .-]?(\d{4})$/"
+                               required><br>
+                        <span class="error boldme em-red error-text" data-ng-show="contactUs.phone.$error.pattern">Sorry: This is not a valid phone number</span>
+
+                    </div>
+
+
+                    <!-- === MESSAGE ===================================================================================================================-->
+
+                    <div class="form-group">
+                        <label for="message" class="label inlineStyle">Message:</label>
+                        <textarea data-ng-model="shortMessage"
+                                  class="form-control"
+                                  rows="5"
+                                  id="message"
+                                  ng-minlength="2"
+                                  ng-maxlength="500"
+                                  placeholder="Leave Us a Message and we will get back to you shortly OR post a testimonial and we will spread the word."
+                                  ng-required="true">
+                        </textarea>
+                    </div>
+
+                    <div class="hugeFloatDown">
+                        <button data-ng-click="send()"
+                                class="btn btn-default floatRight floatDown large"
+                                ng-model="checked"
+                                data-ng-disabled="contactUs.$invalid"
+                                id="submit">Send
+                            <span class="glyphicon glyphicon-send large"></span></button>
+                    </div>
+                </form>
+            </div>
+            </form>
+            <!--<button class="btn btn-default floatRight large" data-ng-click="send()" id="submit">Send  <span class="glyphicon glyphicon-send large"></span></button>-->
+            <!--</form>-->
+
+        </div>
+    </div>
+
+    </div>
+</section>
