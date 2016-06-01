@@ -1,12 +1,12 @@
 (function () {
     "use strict";
 
-    var controllers = angular.module("myApp.controllers");
+    var controllers = angular.module("seedApp.controllerFiles");
 
     controllers.controller("contactCtrl", ["$scope", "contact", function ($scope, contact) {
 
 
-        $scope.topic = $scope.topicsList[0];
+        //$scope.topic = $scope.topicsList[0];
 
         $scope.send = function () {
             contact.send(
@@ -14,7 +14,7 @@
                 $scope.phone,
                 $scope.email,
                 $scope.shortMessage).then(function (response) {
-                $scope.topic.name = "website enquiry";
+                //$scope.topic.name = "website enquiry";
                 $scope.fullName = "";
                 $scope.phone = "";
                 $scope.email = "";

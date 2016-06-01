@@ -36,9 +36,9 @@ function testMessage($message) {
     return preg_match('/^.{3,250}$/m', $message);
 }
 
-function testTopic($topic) {
-    return preg_match('/^.{3,50}$/', $topic);
-}
+//function testTopic($topic) {
+//    return preg_match('/^.{3,50}$/', $topic);
+//}
 
 ///////////////////////// end of function validation. ////////////////////
 
@@ -194,16 +194,19 @@ class ContactEngine extends ValidationEngine {
 
         //add the new logic to parse function
         $message = "Full Name: " . $this->bodyMessage->fullName . "\n\n";
+        $message = $message . "Email: " . $this->bodyMessage->email . "\n\n";
         $message = $message . "Phone: " . $this->bodyMessage->phone . "\n\n";
         $message = $message . $this->bodyMessage->shortMessage . "\n";
 
+
         //send an email to recipients which defines in constructor.
-        $this->sendEmails($this->bodyMessage->email, $this->bodyMessage->topic, $message);
+        $this->sendEmails($this->bodyMessage->email, $message);
+
 
         //constructing a responseMessage
         $responseMessage = array(
             "message" => "Thank you for your email. We will get back to you shortly."
-            );
+        );
         //sending that response message to user
         responseAsJSON($responseMessage);
     }
@@ -215,9 +218,10 @@ class ContactEngine extends ValidationEngine {
     }
 
     //this method will send the email to the recipients.
-    private function sendEmails($from, $subject, $message) {
+    private function sendEmails($from, $message) {
         $headers = "From: $from\n";
         $headers .= "Reply-To: $from";
+        $subject = "Web Enquiry";
         foreach($this->emailArray as $email) {
             mail($email, $subject, $message, $headers);
         }
@@ -230,7 +234,7 @@ $contactEngine = new ContactEngine();
 //Assigning required fields. this is only checking whether the fields is missing from
 //json message or field is empty.
 $contactEngine->setRequiredFields(array(
-   "email", "fullName", "phone", "shortMessage", "topic"
+   "email", "fullName", "phone", "shortMessage"
 ));
 
 //if you need to check extra logic for field's value, you have to assign a function
@@ -240,7 +244,7 @@ $contactEngine->validateField("email", "testEmail");
 $contactEngine->validateField("fullName", "testName");
 $contactEngine->validateField("phone", "testPhoneNumber");
 $contactEngine->validateField("shortMessage", "testMessage");
-$contactEngine->validateField("topic", "testTopic");
+//$contactEngine->validateField("topic", "testTopic");
 
 //since we are using exception we are going to call the parse method from
 //contactEngine object. this method is checking all the criteria that you defined.

@@ -3,7 +3,7 @@
 
     var module = angular.module('seedApp.controllerFiles');
 
-    module.controller('MyCtrl3', ['$scope', '$location', function($scope, $location) {
+    module.controller('wireCtrl', ['$scope', '$location', function($scope, $location) {
 
 
     }]);

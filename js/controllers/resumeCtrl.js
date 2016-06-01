@@ -3,7 +3,7 @@
 
     var module = angular.module('seedApp.controllerFiles');
 
-    module.controller('MyCtrl2', ['$scope', '$location', function($scope, $location) {
+    module.controller('resumeCtrl', ['$scope', '$location', function($scope, $location) {
 
 
     }]);
