@@ -20,13 +20,13 @@ html{
   display: inline;
 }
 
-/*.menu > li:before {*/
-  /*padding-right: 0.3em;*/
-/*}*/
+.menu > li:before {
+  padding-right: 0.3em;
+}
 
-/*.menu > li:nth-child(1):before {*/
-  /*padding: 0;*/
-/*}*/
+.menu > li:nth-child(1):before {
+  padding: 0;
+}
 
 #page1{
   /*background-color: mediumorchid;*/
